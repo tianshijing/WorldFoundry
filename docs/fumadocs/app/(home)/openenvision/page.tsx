@@ -3,7 +3,10 @@ import Link from 'next/link';
 import { SiteNav } from '@/components/site-nav';
 import { SiteSearchTrigger } from '@/components/site-search-trigger';
 import { WorldFoundryWordmarkLink } from '@/components/worldfoundry-wordmark';
+import { withBasePath } from '@/lib/site-path';
 import type { Metadata } from 'next';
+
+const openEnvisionLogoSrc = withBasePath('/openenvision-logo.png') ?? '/openenvision-logo.png';
 
 export const metadata: Metadata = {
   title: 'OpenEnvision',
@@ -26,7 +29,7 @@ export default function OpenEnvisionPage() {
 
         <section className="pi-open-hero" aria-labelledby="openenvision-title">
           <Image
-            src="/openenvision-logo.png"
+            src={openEnvisionLogoSrc}
             alt="OpenEnvision logo"
             className="pi-open-logo"
             width={148}
