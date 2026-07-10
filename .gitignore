@@ -245,10 +245,7 @@ benchmarks_cache/
 *.pth
 *.pt
 
-# Third-party native extensions (not part of WorldFoundry package tree)
-thirdparty/depth-diff-gaussian-rasterization-min/
-thirdparty/diff-gaussian-rasterization/
-thirdparty/simple-knn/
+# Third-party native extensions (vendored CUDA forks; build/ already ignored globally)
 *.safetensors
 *.bin
 *.TTF
