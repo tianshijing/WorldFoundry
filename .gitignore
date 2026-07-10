@@ -311,6 +311,7 @@ docs/fumadocs/public/*.png
 !docs/fumadocs/public/demos/**
 !docs/fumadocs/public/home-demos/
 !docs/fumadocs/public/home-demos/*.mp4
+!docs/fumadocs/public/cover_4x4_hero.mp4
 !docs/fumadocs/public/readme-demos/
 !docs/fumadocs/public/readme-demos/*.mp4
 !docs/fumadocs/public/readme-demos/*.gif

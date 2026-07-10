@@ -36,14 +36,22 @@ export function EcosystemPage({
   title,
 }: EcosystemPageProps) {
   return (
-    <main className="pi-home-shell">
+    <main className="pi-home-shell wf-home-shell">
       <div className="mx-auto w-full max-w-7xl px-4 py-8 md:px-8 md:py-12">
-        <header className="pi-header">
-          <div className="flex flex-wrap items-center justify-between w-full">
-            <WorldFoundryWordmarkLink variant="header" />
-            <div className="pi-site-header-tools ml-auto">
+        <header className="pi-header pi-doc-header wf-home-site-header">
+          <div className="pi-doc-header-inner flex flex-wrap items-center justify-between w-full">
+            <div className="pi-doc-header-brand">
+              <WorldFoundryWordmarkLink variant="compact" />
+            </div>
+            <div className="pi-doc-header-tools ml-auto">
               <SiteNav active={active} />
               <SiteSearchTrigger />
+              <div className="pi-language-switch" aria-label="Language">
+                <Link href={active === 'home' ? '/' : `/${active}`} aria-current="true">
+                  English
+                </Link>
+                <Link href="/zh/docs">中文</Link>
+              </div>
             </div>
           </div>
         </header>

@@ -54,6 +54,275 @@ body:has(.pi-doc-shell) {
   min-height: 100vh;
 }
 
+.wf-home-shell {
+  background: var(--pi-paper);
+  font-family:
+    'Noto Sans SC', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+  max-width: 100vw;
+  overflow-x: clip;
+}
+
+.wf-home-site-header {
+  position: relative;
+}
+
+.wf-home-site-header .pi-nav a {
+  text-decoration: none;
+}
+
+.wf-home-site-header .pi-nav a[aria-current='page'] {
+  font-weight: 800;
+}
+
+.wf-home-site-header .pi-nav a:hover {
+  color: var(--pi-muted);
+}
+
+.wf-home-hero {
+  background: #080808;
+  color: #fff;
+  height: 78svh;
+  max-height: 900px;
+  min-height: min(610px, 78svh);
+  overflow: hidden;
+  position: relative;
+}
+
+.wf-home-hero-poster,
+.wf-home-hero-video,
+.wf-home-hero-scrim {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.wf-home-hero-poster,
+.wf-home-hero-video {
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.wf-home-hero-poster {
+  display: block;
+}
+
+.wf-home-hero-video {
+  display: block;
+}
+
+.wf-home-hero-scrim {
+  background: rgba(3, 5, 4, 0.36);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.wf-home-hero-content {
+  bottom: 54px;
+  left: max(28px, calc(50vw - 700px));
+  max-width: 860px;
+  position: absolute;
+  right: 28px;
+  z-index: 2;
+}
+
+.wf-home-hero-content h1 {
+  color: #fff;
+  font-family: var(--pi-brand-font), Georgia, 'Times New Roman', serif;
+  font-feature-settings: 'ss01' on;
+  font-size: 106px;
+  font-variation-settings: 'SOFT' 50, 'WONK' 0.6;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 0.92;
+  margin: 0;
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.46);
+}
+
+.wf-home-hero-lead {
+  color: #fff;
+  font-family:
+    'Noto Sans SC', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 24px 0 0;
+  max-width: 650px;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.62);
+}
+
+.wf-home-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.wf-home-button {
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 4px;
+  color: inherit;
+  display: inline-flex;
+  font-family:
+    'Noto Sans SC', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  gap: 9px;
+  justify-content: center;
+  line-height: 1;
+  min-height: 43px;
+  padding: 0 16px;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.wf-home-button-primary {
+  background: var(--pi-paper);
+  border-color: var(--pi-paper);
+  color: var(--pi-ink);
+}
+
+.wf-home-button-secondary {
+  background: rgba(4, 6, 5, 0.28);
+  color: #fff;
+}
+
+.wf-home-button:hover,
+.wf-home-button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.wf-home-button-primary:hover,
+.wf-home-button-primary:focus-visible {
+  background: var(--pi-ink);
+  border-color: var(--pi-paper);
+  color: var(--pi-paper);
+}
+
+.wf-home-button-secondary:hover,
+.wf-home-button-secondary:focus-visible {
+  background: var(--pi-paper);
+  border-color: var(--pi-paper);
+  color: var(--pi-ink);
+}
+
+.wf-home-overview {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 40px;
+  justify-content: space-between;
+  padding: 56px 0 48px;
+}
+
+.wf-home-overview h2 {
+  color: #121412;
+  flex: 1 1 52%;
+  font-family: var(--pi-brand-font), Georgia, 'Times New Roman', serif;
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.08;
+  margin: 0;
+  max-width: none;
+}
+
+.wf-home-overview p {
+  color: #555a56;
+  flex: 1 1 42%;
+  font-family: 'Noto Sans SC', ui-sans-serif, system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.72;
+  margin: 0;
+  max-width: none;
+}
+
+@media (max-width: 900px) {
+  .wf-home-hero-content h1 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wf-home-overview {
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 22px;
+  }
+
+  .wf-home-overview h2,
+  .wf-home-overview p {
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .wf-home-site-header .pi-nav a:nth-child(n + 3) {
+    display: none;
+  }
+
+  .wf-home-hero {
+    height: 72svh;
+    min-height: min(560px, 72svh);
+  }
+
+  .wf-home-hero-poster,
+  .wf-home-hero-video {
+    object-fit: contain;
+    object-position: center top;
+  }
+
+  .wf-home-hero-content {
+    bottom: 28px;
+    left: 18px;
+    right: 18px;
+  }
+
+  .wf-home-hero-content h1 {
+    font-size: 44px;
+    line-height: 0.98;
+  }
+
+  .wf-home-hero-lead {
+    font-size: 20px;
+    margin-top: 18px;
+  }
+
+  .wf-home-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .wf-home-button {
+    width: 100%;
+  }
+
+  .wf-home-overview h2 {
+    font-size: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wf-home-hero-video {
+    display: none;
+  }
+
+  .wf-home-button,
+  .wf-home-site-header a {
+    transition: none;
+  }
+}
+
 .pi-home-container {
   max-width: 576px;
   padding: 16px;
@@ -276,7 +545,6 @@ body:has(.pi-doc-shell) {
 .pi-ecosystem-hero {
   border-bottom: 1px solid var(--pi-ink);
   margin: 42px 0 28px;
-  max-width: 760px;
   padding-bottom: 28px;
 }
 
@@ -291,14 +559,14 @@ body:has(.pi-doc-shell) {
 .pi-ecosystem-hero p:not(.pi-label) {
   color: var(--pi-muted);
   margin: 10px 0 0;
-  max-width: 640px;
+  max-width: 720px;
 }
 
 .pi-ecosystem-list {
   border-top: 1px solid var(--pi-line);
   display: flex;
   flex-direction: column;
-  max-width: 920px;
+  width: 100%;
 }
 
 .pi-ecosystem-link {
@@ -334,10 +602,10 @@ body:has(.pi-doc-shell) {
 }
 
 .pi-coming-soon {
-  border: 1px solid var(--pi-line);
-  max-width: 760px;
-  padding: 28px 32px;
   background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--pi-line);
+  padding: 28px 32px;
+  width: 100%;
 }
 
 .pi-coming-soon h2 {
@@ -351,7 +619,7 @@ body:has(.pi-doc-shell) {
   font-size: 14px;
   line-height: 1.6;
   margin: 0;
-  max-width: 560px;
+  max-width: 720px;
 }
 
 .pi-open-section h2 {
