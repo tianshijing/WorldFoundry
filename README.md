@@ -1,4 +1,5 @@
-<img width="1280" height="640" alt="worldfoundry-teaser-github-v4" src="https://github.com/user-attachments/assets/597eb569-a2b2-4f7f-9187-27f4f28afa44" />
+<img width="1280" height="512" alt="worldfoundry-teaser-github-v5" src="https://github.com/user-attachments/assets/848c4c4c-dd61-40dd-91b0-6595a0d556dc" />
+
 
 [![Python](https://img.shields.io/badge/python-3.10%20--%203.13-blue)](pyproject.toml)
 [![License](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
